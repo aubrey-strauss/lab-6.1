@@ -1,6 +1,6 @@
 //2. Create the product base class
 //Inside src/models/Product.ts, create a Product base class with the following:
-export classProduct {
+export class Product {
     sku: string;
     name: string;
     price: number;
@@ -19,7 +19,7 @@ export classProduct {
     }
 
 //getPriceWithTax() - a method that calculates the final price of the product with tax.
-    getPriceWithTax(taxRate: number) {
+    getPriceWithTax(taxRate: number): number {
         return this.price * (1 + taxRate);
     }
 }

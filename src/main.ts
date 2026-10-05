@@ -2,11 +2,9 @@
 //Inside src/main.ts, import the PhysicalProduct and DigitalProduct classes, and create instances of both.
 import { PhysicalProduct } from './models/PhysicalProduct.js';
 import { DigitalProduct } from './models/DigitalProduct.js';
-import { Product } from './models/Product.js';
-
 //Create an array of products that includes both physical and digital products.
-const products: Product[] = [
-    new PhysicalProduct("PHY001", "Board Game", 35.00),
+const products = [
+    new PhysicalProduct("PHY001", "Board Game", 35.00, 1.5),
     new DigitalProduct("DIG001", "Online Casino", 70.00, 100)
 ];
 
@@ -16,7 +14,7 @@ const products: Product[] = [
 console.log("Product Inventory:");
 
 products.forEach((product) => {
-    console.log(product.displayDetails());
+    console.log(JSON.stringify(product, null, 2));
     console.log(`Price with Tax: $${product.getPriceWithTax(0.10).toFixed(2)}`);
 
     if (product instanceof DigitalProduct) {

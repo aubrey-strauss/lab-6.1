@@ -9,7 +9,7 @@ export class DigitalProduct extends Product {
         this.fileSize = fileSize;
     }
     //Override the getPriceWithTax() method to calculate a final price with no tax, since the digital products do not require tax.
-     override getPriceWithTax(taxRate: number): number {
+    getPriceWithTax(taxRate: number): number {
         return this.price;
     }
     //Use a getter method to return the formatted file size in megabytes.

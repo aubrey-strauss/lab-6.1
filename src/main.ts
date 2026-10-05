@@ -1,8 +1,8 @@
 //5. Implement the Main Program:
 //Inside src/main.ts, import the PhysicalProduct and DigitalProduct classes, and create instances of both.
-import { PhysicalProduct } from './models/PhysicalProduct';
-import { DigitalProduct } from './models/DigitalProduct';
-import { Product } from './models/Product';
+import { PhysicalProduct } from './models/PhysicalProduct.js';
+import { DigitalProduct } from './models/DigitalProduct.js';
+import { Product } from './models/Product.js';
 
 //Create an array of products that includes both physical and digital products.
 const products: Product[] = [
@@ -26,3 +26,4 @@ inventory.forEach((product) => {
         console.log(`File Size: ${product.formattedFileSize}`);
     }
 }   
+)

@@ -19,3 +19,31 @@ export class Product {
     getPriceWithTax(taxRate: number) {
         return this.price * (1 + taxRate);
     }
+
+//3.Create the PhysicalProduct Subclass:
+//Inside src/models/PhysicalProduct.ts, create a PhysicalProduct class that extends Product.
+//Add a weight property (number) for physical products.
+//Override the getPriceWithTax() method to calculate a final price that includes a 10% tax rate.
+//Use a getter method to return the formatted weight in kilograms (e.g. “2.5 kg”).
+    import { Product } from './Product';
+//Add a weight property (number) for physical products.
+    weight: number;
+    constructor(sku: string, name: string, price: number, weight: number) {
+        super(sku, name, price);
+        this.weight = weight;
+    }
+    //Override the getPriceWithTax() method to calculate a final price that includes a 10% tax rate.
+    override getPriceWithTax() {
+        const taxRate = 0.10;
+        return this.price * (1 + taxRate);
+    }
+//Use a getter method to return the formatted weight in kilograms (e.g. “2.5 kg”).
+    get formattedWeight() {
+        return `${this.weight.toFixed(2.5)} kg`;
+    }
+
+//4. Create the DigitalProduct Subclass:
+//Inside src/models/DigitalProduct.ts, create a DigitalProduct class that extends Product.
+import { Product } from './Product';
+
+}

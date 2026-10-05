@@ -1,6 +1,6 @@
 //2. Create the product base class
 //Inside src/models/Product.ts, create a Product base class with the following:
-export class Product {
+class Product {
     sku: string;
     name: string;
     price: number;

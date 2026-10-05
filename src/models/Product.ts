@@ -1,6 +1,6 @@
 //2. Create the product base class
 //Inside src/models/Product.ts, create a Product base class with the following:
-class Product {
+export class Product {
     sku: string;
     name: string;
     price: number;
@@ -26,7 +26,7 @@ class Product {
 
 //3.Create the PhysicalProduct Subclass:
 //Inside src/models/PhysicalProduct.ts, create a PhysicalProduct class that extends Product.
-import { Product } from './Product';
+import { Product } from './Product.js';
 export class PhysicalProduct extends Product {
     //Add a weight property (number) for physical products.
     weight: number;     
